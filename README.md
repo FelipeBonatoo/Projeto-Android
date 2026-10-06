@@ -76,18 +76,60 @@ Veja o arquivo [PROCESSO.md](PROCESSO.md).
 Kotlin, Jetpack Compose, Material 3 e Navigation Compose.
 
 ## Imagens
- <img src="prints/1-login-claro.png" alt="Texto Alternativo" width="300">
- 
- <img src="prints/2a-cardapio-formulario-claro.png" alt="Texto Alternativo" width="300">
- 
- <img src="prints/2b-cardapio-grade-claro.png" alt="Texto Alternativo" width="300">
- 
- <img src="prints/3-detalhe-produto-claro.png" alt="Texto Alternativo" width="300">
 
- <img src="prints/4-carrinho-claro.png" alt="Texto Alternativo" width="300">
-
- <img src="prints/5-confirmacao-claro.png" alt="Texto Alternativo" width="300">
-
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <b>1. Login</b><br>
+      <img src="prints/1-login-claro.png" alt="Tela de login" width="250"><br>
+      <sub>Botão só libera com 3 letras ou mais</sub>
+    </td>
+    <td align="center" width="33%">
+      <b>2a. Cardápio — Formulário</b><br>
+      <img src="prints/2a-cardapio-formulario-claro.png" alt="Cardápio com formulário de novo produto" width="250"><br>
+      <sub>Adicionar produto pelo formulário</sub>
+    </td>
+    <td align="center" width="33%">
+      <b>2b. Cardápio — Grade</b><br>
+      <img src="prints/2b-cardapio-grade-claro.png" alt="Cardápio em grade" width="250"><br>
+      <sub>Lista de produtos com remoção pela lixeira</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>3. Detalhe do produto</b><br>
+      <img src="prints/3-detalhe-produto-claro.png" alt="Detalhe do produto" width="250"><br>
+      <sub>Tamanho, leite e preço final calculado</sub>
+    </td>
+    <td align="center">
+      <b>4. Carrinho</b><br>
+      <img src="prints/4-carrinho-claro.png" alt="Carrinho" width="250"><br>
+      <sub>Itens escolhidos, total e confirmar pedido</sub>
+    </td>
+    <td align="center">
+      <b>5. Confirmação</b><br>
+      <img src="prints/5-confirmacao-claro.png" alt="Confirmação do pedido" width="250"><br>
+      <sub>Número do pedido, cliente e total</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>6. Pedidos</b><br>
+      <img src="prints/6-pedidos-claro.png" alt="Lista de pedidos" width="250"><br>
+      <sub>Pedidos já realizados</sub>
+    </td>
+    <td align="center">
+      <b>7. Detalhe do pedido</b><br>
+      <img src="prints/7-detalhe-pedido-claro.png" alt="Detalhe do pedido" width="250"><br>
+      <sub>Itens e valores de um pedido</sub>
+    </td>
+    <td align="center">
+      <b>8. Resumo</b><br>
+      <img src="prints/8-resumo-claro.png" alt="Resumo do usuário" width="250"><br>
+      <sub>Resumo do usuário</sub>
+    </td>
+  </tr>
+</table>
  <img src="prints/6-pedidos-claro.png" alt="Texto Alternativo" width="300">
 
  <img src="prints/7-detalhe-pedido-claro.png" alt="Texto Alternativo" width="300">
