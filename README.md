@@ -78,23 +78,21 @@ Kotlin, Jetpack Compose, Material 3 e Navigation Compose.
 ## Imagens
  <img src="prints/1-login-claro.png" alt="Texto Alternativo" width="300">
  
- <img src="2a-cardapio-formulario-claro.png" alt="Texto Alternativo" width="300">
+ <img src="prints/2a-cardapio-formulario-claro.png" alt="Texto Alternativo" width="300">
  
- <img src="2b-cardapio-grade-claro.png" alt="Texto Alternativo" width="300">
+ <img src="prints/2b-cardapio-grade-claro.png" alt="Texto Alternativo" width="300">
  
- <img src="3-detalhe-produto-claro.png" alt="Texto Alternativo" width="300">
+ <img src="prints/3-detalhe-produto-claro.png" alt="Texto Alternativo" width="300">
 
- <img src="4-carrinho-claro.png" alt="Texto Alternativo" width="300">
+ <img src="prints/4-carrinho-claro.png" alt="Texto Alternativo" width="300">
 
- <img src="4-carrinho-claro.png" alt="Texto Alternativo" width="300">
+ <img src="prints/5-confirmacao-claro.png" alt="Texto Alternativo" width="300">
 
- <img src="5-confirmacao-claro.png" alt="Texto Alternativo" width="300">
+ <img src="prints/6-pedidos-claro.png" alt="Texto Alternativo" width="300">
 
- <img src="6-pedidos-claro.png" alt="Texto Alternativo" width="300">
+ <img src="prints/7-detalhe-pedido-claro.png" alt="Texto Alternativo" width="300">
 
- <img src="7-detalhe-pedido-claro.png" alt="Texto Alternativo" width="300">
-
- <img src="8-resumo-claro.png" alt="Texto Alternativo" width="300">
+ <img src="prints/8-resumo-claro.png" alt="Texto Alternativo" width="300">
  
  
  
