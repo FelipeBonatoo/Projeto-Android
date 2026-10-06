@@ -130,11 +130,6 @@ Kotlin, Jetpack Compose, Material 3 e Navigation Compose.
     </td>
   </tr>
 </table>
- <img src="prints/6-pedidos-claro.png" alt="Texto Alternativo" width="300">
 
- <img src="prints/7-detalhe-pedido-claro.png" alt="Texto Alternativo" width="300">
-
- <img src="prints/8-resumo-claro.png" alt="Texto Alternativo" width="300">
- 
  
  
