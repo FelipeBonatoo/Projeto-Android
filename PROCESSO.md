@@ -72,4 +72,4 @@ barato e mais caro dos produtos dela.
 > fazer a lista atualizar na tela com `mutableStateListOf`, e impedir remover uma categoria que
 > ainda tem produtos.
 
-**[PRINT/VÍDEO: adicionando e removendo itens nas duas listas]**
+**[PRINT: adicionando e removendo itens nas duas listas]**
