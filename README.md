@@ -6,7 +6,6 @@ uma cafeteria, feito em Kotlin com Jetpack Compose e Material 3.
 O app agora tem navegação de verdade entre as telas, duas listas em que dá para adicionar e
 remover itens, e telas de detalhes que mostram o item que foi clicado. Os dados ficam só na
 memória: se o app for fechado, eles voltam ao que estava no começo.
- <img src="prints/1-login-claro.png" alt="Texto Alternativo" width="300">
 
 ## Como rodar
 
@@ -75,3 +74,27 @@ Veja o arquivo [PROCESSO.md](PROCESSO.md).
 ## Tecnologias
 
 Kotlin, Jetpack Compose, Material 3 e Navigation Compose.
+
+## Imagens
+ <img src="prints/1-login-claro.png" alt="Texto Alternativo" width="300">
+ 
+ <img src="2a-cardapio-formulario-claro.png" alt="Texto Alternativo" width="300">
+ 
+ <img src="2b-cardapio-grade-claro.png" alt="Texto Alternativo" width="300">
+ 
+ <img src="3-detalhe-produto-claro.png" alt="Texto Alternativo" width="300">
+
+ <img src="4-carrinho-claro.png" alt="Texto Alternativo" width="300">
+
+ <img src="4-carrinho-claro.png" alt="Texto Alternativo" width="300">
+
+ <img src="5-confirmacao-claro.png" alt="Texto Alternativo" width="300">
+
+ <img src="6-pedidos-claro.png" alt="Texto Alternativo" width="300">
+
+ <img src="7-detalhe-pedido-claro.png" alt="Texto Alternativo" width="300">
+
+ <img src="8-resumo-claro.png" alt="Texto Alternativo" width="300">
+ 
+ 
+ 
