@@ -1,11 +1,11 @@
 # CaféPositivo
 
-Trabalho 2 (MAF - Mínimo Aplicativo Funcional) da disciplina de Android. É um app de pedidos de
+Trabalho 3 (persistência com Room) da disciplina de Android. É um app de pedidos de
 uma cafeteria, feito em Kotlin com Jetpack Compose e Material 3.
 
 O app agora tem navegação de verdade entre as telas, duas listas em que dá para adicionar e
-remover itens, e telas de detalhes que mostram o item que foi clicado. Os dados ficam só na
-memória: se o app for fechado, eles voltam ao que estava no começo.
+remover itens, e telas de detalhes que mostram o item que foi clicado. Produtos e pedidos ficam
+salvos num banco local (Room): continuam lá mesmo depois de fechar o app. O banco começa vazio.
 
 ## Como rodar
 
@@ -65,15 +65,16 @@ O botão de voltar da barra de cima chama `navController.popBackStack()`.
 
 ## Documentação do processo
 
-Veja o arquivo [PROCESSO.md](PROCESSO.md).
+Veja o arquivo [PROCESSO.md](PROCESSO.md) — tem a parte do Trabalho 3 (Room: Entity, DAO,
+Database e teste de persistência) e, mais abaixo, o histórico do Trabalho 2.
 
 ## Limitações
 
-- Os dados só existem enquanto o app está aberto (sem banco de dados)
+- O carrinho fica só na memória (é temporário de propósito); produtos e pedidos ficam no banco
 
 ## Tecnologias
 
-Kotlin, Jetpack Compose, Material 3 e Navigation Compose.
+Kotlin, Jetpack Compose, Material 3, Navigation Compose e Room.
 
 ## Imagens
 

@@ -14,6 +14,6 @@ fun TelaLogin(navController: NavController) {
         OutlinedTextField(value = nomeUsuario, onValueChange = { nomeUsuario = it }, label = { Text("Nome") }, modifier = Modifier.fillMaxWidth())
         Button(onClick = {
             navController.navigate(Rotas.CARDAPIO) { popUpTo(Rotas.LOGIN) { inclusive = true } }
-        }, modifier = Modifier.fillMaxWidth()) { Text("Entrar") }
+        }, enabled = nomeUsuario.trim().length >= 3, modifier = Modifier.fillMaxWidth()) { Text("Entrar") }
     }
 }

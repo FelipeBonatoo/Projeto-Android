@@ -1,17 +1,28 @@
 package com.example.myapplication
 
+import android.util.Log
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 @Composable
 fun TelaCardapio(navController: NavController) {
+    // Pega o banco (Singleton) e o DAO de produtos
+    val context = LocalContext.current
+    val dao = AppDatabase.getDatabase(context).produtoDao()
+    // Lista que a tela mostra; é preenchida com o que vem do banco
+    var produtos by remember { mutableStateOf(listOf<Produto>()) }
+
     var nome by remember { mutableStateOf("") }
     var descricao by remember { mutableStateOf("") }
     var preco by remember { mutableStateOf("") }
@@ -19,6 +30,18 @@ fun TelaCardapio(navController: NavController) {
     var categoria by remember { mutableStateOf("Cafés") }
     var menuEmojiAberto by remember { mutableStateOf(false) }
     var menuAberto by remember { mutableStateOf(false) }
+
+    // LaunchedEffect(Unit): roda uma vez quando a tela abre e busca os produtos no banco.
+    // Dispatchers.IO: o acesso ao banco roda numa thread de fundo, sem travar a tela.
+    LaunchedEffect(Unit) {
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                produtos = dao.buscarTodos()
+            } catch (e: Exception) {
+                Log.e("TelaCardapio", "Erro ao buscar produtos", e)
+            }
+        }
+    }
 
     LazyColumn(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         item {
@@ -54,11 +77,20 @@ fun TelaCardapio(navController: NavController) {
 
                 Button(onClick = {
                     val valor = preco.replace(',', '.').toDoubleOrNull() ?: 0.0
-                    produtos.add(Produto(proximoIdProduto, emoji, nome, descricao, valor, categoria))
-                    proximoIdProduto++
+                    // Sem id: o Room gera sozinho (autoGenerate)
+                    val novo = Produto(emoji, nome, descricao, valor, categoria)
                     nome = ""
                     descricao = ""
                     preco = ""
+                    // INSERT no banco e depois busca a lista de novo para a tela atualizar
+                    CoroutineScope(Dispatchers.IO).launch {
+                        try {
+                            dao.inserir(novo)
+                            produtos = dao.buscarTodos()
+                        } catch (e: Exception) {
+                            Log.e("TelaCardapio", "Erro ao inserir produto", e)
+                        }
+                    }
                 }, modifier = Modifier.fillMaxWidth()) { Text("Adicionar produto") }
             }
         }
@@ -72,7 +104,17 @@ fun TelaCardapio(navController: NavController) {
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
                     ) {
                         Column(Modifier.fillMaxWidth().padding(bottom = 12.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-                            TextButton(onClick = { produtos.remove(produto) }, modifier = Modifier.align(Alignment.End)) {
+                            TextButton(onClick = {
+                                // DELETE no banco e recarrega a lista
+                                CoroutineScope(Dispatchers.IO).launch {
+                                    try {
+                                        dao.deletar(produto)
+                                        produtos = dao.buscarTodos()
+                                    } catch (e: Exception) {
+                                        Log.e("TelaCardapio", "Erro ao deletar produto", e)
+                                    }
+                                }
+                            }, modifier = Modifier.align(Alignment.End)) {
                                 Text("✕", color = MaterialTheme.colorScheme.error)
                             }
                             Text(produto.emoji, fontSize = 32.sp, modifier = Modifier.padding(top = 8.dp))
