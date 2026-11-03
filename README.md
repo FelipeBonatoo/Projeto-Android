@@ -9,7 +9,7 @@ mesmas telas e as mesmas funções, reorganizado em camadas (Model — View — 
 
 ## Como rodar
 
-1. Abrir a pasta `MyApplication4` no Android Studio  
+1. Abrir a pasta `MyApplication4` no Android Studio    
 2. Esperar o Gradle sincronizar
 3. Rodar no emulador ou em um celular
 
