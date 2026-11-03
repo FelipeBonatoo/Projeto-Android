@@ -180,12 +180,6 @@ pelo tipo pedido, cria o ViewModel certo.
   quando termina; como o `viewModelScope` roda na thread principal, a tela navega direto.
 
 
-## 6. Dificuldades do trio
-
-**[PREENCHER: o que cada integrante achou difícil e como resolveram]**
-
----
-
 ## Imagens
 
 <table>
