@@ -34,8 +34,6 @@ A barra de baixo leva para Cardápio, Carrinho, Pedidos e Resumo.
 
 # Trabalho 4 — Processo e decisões
 
-> Rascunho para ser conferido e ajustado com as palavras do trio.
-> Onde aparece **[PRINT AQUI]** / **[VÍDEO AQUI]**, colocar a imagem ou o vídeo (pasta `prints/`).
 
 ## 1. Como estava no Trabalho 3 e o que mudou
 
@@ -85,8 +83,6 @@ Resumo do que mudou:
 | `Dados.kt` com variáveis globais | `SessaoViewModel` com `SessaoUiState` |
 
 Nenhuma tela, campo ou função nova foi criada.
-
-**[PRINT AQUI: estrutura de pacotes no Android Studio]**
 
 ## 2. Como dividimos os pacotes
 
@@ -163,7 +159,6 @@ o seu `viewModel()` dentro do `NavHost`, cada uma teria um carrinho diferente. C
 ViewModels precisam de um ou dos dois Repositories, então a `CafeViewModelFactory` recebe os dois e,
 pelo tipo pedido, cria o ViewModel certo.
 
-**[PRINT AQUI: um ViewModel e seu UiState no Android Studio]**
 
 ## 5. Alguma funcionalidade quebrou? Como encontramos e corrigimos
 
@@ -184,7 +179,6 @@ pelo tipo pedido, cria o ViewModel certo.
   navegar depois de inserir. Agora o ViewModel recebe uma função (`aoSalvar`, `aoConfirmar`) e a chama
   quando termina; como o `viewModelScope` roda na thread principal, a tela navega direto.
 
-**[VÍDEO AQUI: app funcionando — adicionar, listar, atualizar, remover e persistir]**
 
 ## 6. Dificuldades do trio
 
