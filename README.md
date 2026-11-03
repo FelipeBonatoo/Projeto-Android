@@ -162,8 +162,6 @@ pelo tipo pedido, cria o ViewModel certo.
 
 ## 5. Alguma funcionalidade quebrou? Como encontramos e corrigimos
 
-> Conferir com o que aconteceu de verdade com o trio e ajustar.
-
 - **Erros de compilação depois de mover os arquivos.** Ao mover para os pacotes, apareceram erros de
   `import`. Resolvemos usando o Refactor → Move do Android Studio e corrigindo os que sobraram.
 - **`buscarTodos()` virou Flow e as telas pararam de compilar.** O código antigo fazia
